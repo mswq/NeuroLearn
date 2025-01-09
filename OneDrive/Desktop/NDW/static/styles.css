@@ -1,0 +1,445 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Josefin Sans", serif;
+    background-color: #e9edf2;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    font-size: 1.1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #085439;
+}
+
+.navbar-nav .nav-link {
+    color: #085439;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #064f34;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #085439, #0c6c48);
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn {
+    background-color: #e9edf2;
+    color: #085439;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background-color: #d4d8dc;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #f4f4f9;
+    padding: 60px 20px;
+}
+
+.features-section .feature-box {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.features-section .feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.features-section .feature-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.features-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #085439;
+    margin-bottom: 15px;
+}
+
+.features-section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Auth Page Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.auth-form {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-form h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #085439;
+    font-weight: bold;
+}
+
+/* Redirect Text */
+.redirect-text {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.redirect-text a {
+    color: #085439;
+    font-weight: 500;
+}
+
+.redirect-text a:hover {
+    text-decoration: underline;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Study Plan Page Styling */
+#studyplan {
+    font-family: "Josefin Sans", serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+#studyplan h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #085439;
+    margin-bottom: 20px;
+}
+
+#studyplan h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #085439;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#studyplan p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#studyplan strong {
+    color: #085439;
+}
+
+#studyplan .btn {
+    display: inline-block;
+    background-color: #085439;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+#studyplan .btn:hover {
+    background-color: #064f34;
+}
+
+/* Get Started Page Styling */
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    padding: 40px 20px;
+}
+
+.text {
+    margin-bottom: 30px;
+}
+
+.text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #085439;
+    margin-bottom: 10px;
+}
+
+.text .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#formgetstarted {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+#formgetstarted label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+#formgetstarted select,
+#formgetstarted input[type="file"] {
+    font-size: 1rem;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#formgetstarted select:focus,
+#formgetstarted input[type="file"]:focus {
+    border-color: #085439;
+}
+
+#submitbutton {
+    background-color: #085439;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+#submitbutton:hover {
+    background-color: #064f34;
+}
+
+
+#gsbutton {
+    display: inline-block;
+    background-color: #085439;
+    color: #f4f4f9;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#gsbutton:hover {
+    background-color: #064f34;
+}
+
+.white {
+    color: #f4f4f9;
+}
+
+/* About Page Styling */
+.about-container {
+    padding: 60px 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.about-header {
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #085439;
+}
+
+.about-header .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.about-content {
+    margin-top: 20px;
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #085439;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.about-content ul li {
+    margin-bottom: 10px;
+}
+
+.about-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    #gsbutton {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+    .about-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-header .subtitle {
+        font-size: 1rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    #studyplan {
+        padding: 20px;
+    }
+
+    #studyplan h1 {
+        font-size: 2rem;
+    }
+
+    #studyplan h2 {
+        font-size: 1.5rem;
+    }
+
+    #studyplan p {
+        font-size: 1rem;
+    }
+
+    #studyplan .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .container1 {
+        padding: 20px;
+    }
+
+    .text h1 {
+        font-size: 2rem;
+    }
+
+    .text .subtitle {
+        font-size: 1rem;
+    }
+
+    #formgetstarted {
+        padding: 20px 15px;
+    }
+
+    #submitbutton {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
