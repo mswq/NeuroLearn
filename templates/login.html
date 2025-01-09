@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<body>
+    <div class="auth-container">
+        <div class="auth-form">
+            <h1 class="green">Log In</h1>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Log In</button>
+            </form>
+            <p class="redirect-text">Don't have an account? <a href="/signup" class="green">Sign Up</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+{% endblock %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}

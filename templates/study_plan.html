@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<body class="container" id="studyplan">
+    <h1>Your Personalized Study Plan</h1>
+
+    <p><strong>Neurodiverse Type:</strong> {{ neurotype }}</p>
+    <p><strong>Preferred Learning Style:</strong> {{ learning_style }}</p>
+    <h2>Generated Plan:</h2>
+    <p>
+        {% if study_plan %}
+            {{ study_plan }}
+        {% else %}
+            An error occurred while generating the study plan.
+        {% endif %}
+    </p>
+
+    <a href="{{ url_for('get_started') }}">
+        <button class="btn">Upload Another File</button>
+    </a>
+</body>
+</html>
+
+{% endblock %}
