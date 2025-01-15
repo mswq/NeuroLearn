@@ -11,7 +11,7 @@ NeuroLearn is a web application designed to empower neurodiverse learners by gen
 
   ![image](https://github.com/user-attachments/assets/1cd04527-412e-4a90-889a-db16aa3ce52f)
 
-##Future Changes
+## Future Changes
 * Explore auditory methods to present information for audio learners, enhancing the accessibility of the platform.
 * Develop a feature to create separate lessons within the learning plan, allowing for a more organized and modular learning experience.
 * Implement a dashboard to track user progress, visualize learning outcomes, and provide performance analytics to help motivate users.
