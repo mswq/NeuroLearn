@@ -47,18 +47,15 @@ def study_plan():
 @app.route('/upload', methods=['POST'])
 def upload_file():
     try:
-        # Get form data
         neurotype = request.form.get('neurotype')
         learning_style = request.form.get('learning_style')
-
-        # Ensure a file is uploaded
+        
         if 'file' not in request.files:
             flash("No file uploaded.", "error")
             return redirect(url_for('get_started'))
         
         file = request.files['file']
 
-        # Validate file type
         if file.filename == '':
             flash("No file selected.", "error")
             return redirect(url_for('get_started'))
@@ -66,16 +63,13 @@ def upload_file():
             flash("Invalid file type. Only .pptx files are allowed.", "error")
             return redirect(url_for('get_started'))
 
-        # Save the file
         safe_filename = secure_filename(file.filename)
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], safe_filename)
         os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
         file.save(filepath)
 
-        # Generate the study plan
         study_plan = generate_study_plan_with_openai(neurotype, learning_style, filepath)
 
-        # Pass neurotype, learning_style, and study_plan to the template
         return render_template(
             'study_plan.html',
             neurotype=neurotype,
@@ -90,11 +84,10 @@ def upload_file():
 def generate_study_plan_with_openai(neurotype, learning_style, filepath):
     try:
         content = extract_pptx_content(filepath)
-        print(f"Extracted Content: {content}")  # Debugging
+        print(f"Extracted Content: {content}") 
 
-        # Construct the prompt
         prompt = construct_prompt(neurotype, learning_style, content)
-        print(f"Generated Prompt: {prompt}")  # Debugging
+        print(f"Generated Prompt: {prompt}") 
 
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
@@ -113,15 +106,6 @@ def generate_study_plan_with_openai(neurotype, learning_style, filepath):
         return "An error occurred while generating the study plan."
 
 def extract_pptx_content(filepath):
-    """
-    Parses a PowerPoint file and extracts content from each slide.
-
-    Args:
-        filepath (str): Path to the PowerPoint file.
-
-    Returns:
-        str: Combined content from all slides, formatted as text.
-    """
     presentation = Presentation(filepath)
     slides_content = []
 
@@ -136,24 +120,12 @@ def extract_pptx_content(filepath):
                     slide_data["content"].append(text)
         slides_content.append(slide_data)
 
-    # Format slides as a single string
     formatted_content = "\n".join(
         f"{slide['title']}:\n{' '.join(slide['content'])}" for slide in slides_content
     )
     return formatted_content
 
 def construct_prompt(neurotype, learning_style, content):
-    """
-    Constructs a personalized prompt for OpenAI based on user inputs and content.
-
-    Args:
-        neurotype (str): Neurodiverse type (e.g., 'adhd', 'dyslexia', 'autism').
-        learning_style (str): Learning style (e.g., 'visual', 'auditory', 'kinesthetic').
-        content (str): Processed content from the uploaded file.
-
-    Returns:
-        str: The complete prompt for OpenAI.
-    """
     prompt = f"""
     Create a personalized study plan for a student based on the following details:
     - Neurodiverse Type: {neurotype}
